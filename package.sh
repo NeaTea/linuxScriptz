@@ -20,7 +20,7 @@ else
 	do
 		packages=${pkgArray[numOfPackage]}
 		read -r -n1 -p "Do you want to uninstall $packages Y/N" Reply
-		if [ "$Reply" == 'Y' ] || [ "$Reply" == "y" ]; then
+		if [ "$Reply" == 'Y' ] || [ "$Reply" == "y" ] || [ "$Reply" == "Yes" ]; then
 			apt purge "$packages"
 		elif [ "$Reply" == 'N' ] || [ "$Reply" == "n" ]; then
 			echo "$packages : fine then I guess I'll remain on this computer and ANNOY YOU 4EVER!!!"
